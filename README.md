@@ -4,5 +4,7 @@
 
 Install:
 pip install discord
+
+
 python bot.py
 
