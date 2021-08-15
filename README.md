@@ -3,6 +3,7 @@
 хз зачем дискорд бот мб кому то пригодится
 
 Install:
+
 pip install discord
 
 
