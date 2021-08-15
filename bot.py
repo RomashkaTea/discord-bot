@@ -5,6 +5,11 @@ bot = commands.Bot(command_prefix = '!')
 async def on_ready():
     print(f"Connected to {bot.user}")
 @bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound ):
+        await ctx.send("Unknown command.")
+
+@bot.event
 async def on_message(message):
     await bot.process_commands(message)
     if message.content == "ping":
