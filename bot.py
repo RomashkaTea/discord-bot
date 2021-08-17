@@ -19,7 +19,7 @@ async def on_message(message):
 @bot.command() 
 async def бан(ctx, user: discord.Member, *, reason="No reason"):
     await user.ban(reason=reason)
-    ban = discord.Embed(title=f"<:geneleak:869697081558831164> Забанен {user.name}!", description=f"Причина: {reason}\nЗабанил: {ctx.author.mention}")
+    ban = discord.Embed(title=f"<:geneleak:869697081558831164> Banned {user.name}!", description=f"Reason: {reason}\nого: {ctx.author.mention}")
     await ctx.message.delete()
     await ctx.channel.send(embed=ban)
     await user.send(embed=ban)
